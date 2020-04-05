@@ -1,6 +1,9 @@
 # design-components
 
-> My riveting Nuxt.js project
+> My Design Components Nuxt.js project
+
+## 環境
+Nuxt.js + TypeScript + Storybook
 
 ## Build Setup
 

@@ -1,4 +1,6 @@
-export default {
+import { Configuration } from '@nuxt/types'
+
+const config: Configuration = {
   mode: 'universal',
   /*
    ** Headers of the page
@@ -56,3 +58,5 @@ export default {
     ignoreNotFoundWarnings: true
   }
 }
+
+export default config
