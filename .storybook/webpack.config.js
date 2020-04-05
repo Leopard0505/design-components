@@ -44,15 +44,15 @@ module.exports = async ({ config, mode }) => {
       {
         loader: 'sass-loader',
       },
-      // {
-      //   loader: 'sass-resources-loader',
-      //   options: {
-      //     resources: [
-      //       path.resolve(__dirname, './../assets/scss/_variables.scss'),
-      //       path.resolve(__dirname, './../assets/scss/common.scss'),
-      //     ],
-      //   }
-      // }
+      {
+        loader: 'sass-resources-loader',
+        options: {
+          resources: [
+            path.resolve(__dirname, './../assets/scss/_variables.scss'),
+            path.resolve(__dirname, './../assets/scss/_mixins.scss'),
+          ],
+        }
+      }
     ]
   });
 

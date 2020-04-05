@@ -41,16 +41,16 @@ export default class AtomsButtonsCommonButton extends Vue {
   }
 
   &__primary {
-    background-color: #1D65F1;
-    border: solid 1px #1D65F1;
+    background-color: $primary;
+    border: solid 1px $primary;
   }
   &__success {
-    background-color: #1DF13F;
-    border: solid 1px #1DF13F;
+    background-color: $success;
+    border: solid 1px $success;
   }
   &__danger {
-    background-color: #F1501D;
-    border: solid 1px #F1501D;
+    background-color: $danger;
+    border: solid 1px $danger;
   }
 }
 </style>
