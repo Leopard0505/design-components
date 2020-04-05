@@ -60,7 +60,21 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
-    extend(_config, _ctx) {}
+    extend(_config, _ctx) {},
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            // require.resolve('@nuxt/babel-preset-app-edge'), // For nuxt-edge users
+            {
+              buildTarget: isServer ? 'server' : 'client',
+              corejs: { version: 3 }
+            }
+          ]
+        ]
+      }
+    }
   },
   typescript: {
     typeCheck: {

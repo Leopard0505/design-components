@@ -1,9 +1,6 @@
 <template>
   <transition>
-    <button
-      class="round_btn"
-      :class="`round_btn__${type}`"
-    >
+    <button class="round_btn" :class="`round_btn__${type}`">
       <slot>10</slot>
     </button>
   </transition>
@@ -25,8 +22,8 @@ export default class AtomsButtonsRoundButton extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import url("~/assets/scss/_variables");
-@import url("~/assets/scss/_mixins");
+@import url('~/assets/scss/_variables');
+@import url('~/assets/scss/_mixins');
 
 .round_btn {
   width: 50px;
@@ -38,7 +35,7 @@ export default class AtomsButtonsRoundButton extends Vue {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  transition: .3s;
+  transition: 0.3s;
 
   &__primary {
     @include bg-gradient(180deg, $primary, 20%);
@@ -52,6 +49,5 @@ export default class AtomsButtonsRoundButton extends Vue {
     @include bg-gradient(180deg, $danger, 20%);
     border: solid 1px $danger;
   }
-  
 }
 </style>

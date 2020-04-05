@@ -1,15 +1,9 @@
 <template>
   <transition>
-    <div
-      class="card"
-      :class="`card__${type}`"
-    >
+    <div class="card" :class="`card__${type}`">
       <div class="card_header">
         <span class="card_icon_box">
-          <font-awesome-icon
-            class="card_icon"
-            :icon="icon"
-          />
+          <font-awesome-icon class="card_icon" :icon="icon" />
         </span>
         <div class="card_title_box">
           <span class="card_title">
@@ -22,8 +16,9 @@
       </div>
       <div class="card_body">
         <slot name="body">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
         </slot>
       </div>
     </div>
@@ -43,8 +38,8 @@ export default class AtomsCardsCommonCard extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import url("~/assets/scss/_variables");
-@import url("~/assets/scss/_mixins");
+@import url('~/assets/scss/_variables');
+@import url('~/assets/scss/_mixins');
 
 @mixin card($color: $primary) {
   .card_icon_box {
@@ -107,7 +102,6 @@ export default class AtomsCardsCommonCard extends Vue {
   &_body {
     color: $gray;
   }
-
 
   &__primary {
     @include card($primary);

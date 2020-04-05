@@ -24,7 +24,8 @@
     "@nuxt/typescript-runtime": "^0.4.2",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
-    "nuxt-property-decorator": "^2.5.1"
+    "nuxt-property-decorator": "^2.5.1",
+    "core-js": "^3.6.4"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.2",
