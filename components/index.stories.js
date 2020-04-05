@@ -9,3 +9,11 @@ import './atoms/cards/CommonCard.story'
 
 /** atoms Forms */
 import './atoms/forms/InputForm.story'
+
+/** molecules */
+
+/** molecules Sidebars */
+import './molecules/sidebars/CommonSidebar.story'
+
+/** molecules Contents */
+import './molecules/contents/CommonContent.story'
