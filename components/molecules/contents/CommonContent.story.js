@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import CommonContent from './CommonContent.vue'
 
-storiesOf('Molecules/sidebars', module).add(
+storiesOf('Molecules/contents', module).add(
   'CommonContent',
   () => ({
     components: { CommonContent },

@@ -32,8 +32,8 @@ import { Component, Vue, Prop } from 'nuxt-property-decorator'
   name: 'AtomsCardsCommonCard'
 })
 export default class AtomsCardsCommonCard extends Vue {
-  @Prop({ type: String, default: 'primary' }) type: string
-  @Prop({ type: String, default: 'clock' }) icon: string
+  @Prop({ type: String, default: 'primary' }) type!: string
+  @Prop({ type: String, default: 'clock' }) icon!: string
 }
 </script>
 

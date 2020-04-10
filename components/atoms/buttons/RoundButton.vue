@@ -17,7 +17,7 @@ import CommonButton from './CommonButton.vue'
   }
 })
 export default class AtomsButtonsRoundButton extends Vue {
-  @Prop({ type: String, default: 'primary' }) type: string
+  @Prop({ type: String, default: 'primary' }) type!: string
 }
 </script>
 

@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
+  <div>
     <CommonSidebar />
-    <main id="main">
-      <CommonContent />
-    </main>
+    <div class="container">
+      <main id="main">
+        <CommonContent />
+      </main>
+    </div>
   </div>
 </template>
 
@@ -29,7 +31,8 @@ body {
   padding: 15px;
 }
 #main {
-  width: calc(100% - 200px);
-  margin-left: 200px;
+  position: fixed;
+  width: calc(100% - 215px);
+  margin-left: 185px;
 }
 </style>

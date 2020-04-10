@@ -13,7 +13,7 @@ import { Component, Vue, Prop } from 'nuxt-property-decorator'
   name: 'AtomsButtonsCommonButton'
 })
 export default class AtomsButtonsCommonButton extends Vue {
-  @Prop({ type: String, default: 'primary' }) type: string
+  @Prop({ type: String, default: 'primary' }) type!: string
 }
 </script>
 

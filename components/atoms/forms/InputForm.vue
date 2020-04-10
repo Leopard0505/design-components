@@ -14,7 +14,7 @@ import { Component, Vue, Prop } from 'nuxt-property-decorator'
   name: 'AtomsFormsInputForm'
 })
 export default class AtomsFormsInputForm extends Vue {
-  @Prop({ type: String, default: 'text' }) type: string
+  @Prop({ type: String, default: 'text' }) type!: string
 }
 </script>
 

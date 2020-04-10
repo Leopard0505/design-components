@@ -18,13 +18,13 @@ export default class MoleculesContentsCommonContent extends Vue {}
 <style lang="scss" scoped>
 .content {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #1d65f1;
   border-radius: 20px;
 
   &_wrapper {
     width: 100%;
-    min-height: 100vh;
+    min-height: 95vh;
     background-color: #f0f6fb;
     border-radius: 20px;
   }

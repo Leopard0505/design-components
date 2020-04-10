@@ -1,40 +1,36 @@
 <template>
-  <button class="icon_button">
-    <font-awesome-icon class="icon" :icon="['fas', icon]" />
-    <slot>リンク先</slot>
-  </button>
+  <div class="tile">
+    <font-awesome-icon class="icon" :icon="['far', icon]" />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
 @Component({
-  name: 'AtomsButtonsIconButton'
+  name: 'AtomsTilesCommonTile'
 })
-export default class AtomsButtonsIconButton extends Vue {
+export default class AtomsTilesCommonTile extends Vue {
   @Prop({ type: String, default: '' }) icon!: string
 }
 </script>
 
 <style lang="scss" scoped>
-.icon_button {
-  height: 40px;
+.tile {
+  width: 100%;
+  height: 100px;
   background-color: #1d65f1;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 3rem;
   border: solid 1px #1d65f1;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 
   .icon {
     margin-left: 10px;
     margin-right: 10px;
-  }
-
-  &:hover {
-    background-color: lighten(#1d65f1, 20%);
   }
 }
 </style>
