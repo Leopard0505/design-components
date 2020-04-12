@@ -19,14 +19,21 @@ export default class MoleculesContentsCommonContent extends Vue {}
 .content {
   width: 100%;
   min-height: 100%;
-  background-color: #1d65f1;
+  background-color: $light-gray;
   border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   &_wrapper {
-    width: 100%;
-    min-height: 95vh;
-    background-color: #f0f6fb;
+    // width: 100%;
+    // min-height: 100%;
+    // min-height: 95vh;
+    // background-color: $light-gray;
     border-radius: 20px;
+    padding: 15px;
   }
 }
 </style>

@@ -12,6 +12,13 @@
             </nuxt-link>
           </li>
           <li class="sidebar_item">
+            <nuxt-link class="link" to="/client">
+              <IconButton class="sidebar_link" icon="address-book">
+                Client
+              </IconButton>
+            </nuxt-link>
+          </li>
+          <li class="sidebar_item">
             <nuxt-link class="link" to="/balance">
               <IconButton class="sidebar_link" icon="balance-scale-right">
                 Balance
@@ -65,7 +72,7 @@ export default class MoleculesSidebarsCommonSidebar extends Vue {}
 
 <style lang="scss" scoped>
 #sidebar {
-  background-color: #1d65f1;
+  background-color: $primary;
   height: 100%;
   width: 200px;
   max-width: 200px;
@@ -106,7 +113,7 @@ export default class MoleculesSidebarsCommonSidebar extends Vue {}
   }
   .nuxt-link-active {
     .sidebar_link {
-      background-color: lighten(#1d65f1, 20%);
+      background-color: lighten($primary, 20%);
     }
   }
 }

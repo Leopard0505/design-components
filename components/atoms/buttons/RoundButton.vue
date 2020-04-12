@@ -22,9 +22,6 @@ export default class AtomsButtonsRoundButton extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import url('~/assets/scss/_variables');
-@import url('~/assets/scss/_mixins');
-
 .round_btn {
   width: 50px;
   height: 50px;

@@ -36,10 +36,10 @@ export default class MoleculesSignoutsCommonSignout extends Vue {
 .signout {
   width: 100%;
   height: 40px;
-  background-color: #1d65f1;
+  background-color: $primary;
   color: #fff;
   font-size: 0.8rem;
-  border: solid 1px #1d65f1;
+  border: solid 1px $primary;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ export default class MoleculesSignoutsCommonSignout extends Vue {
 
   &:hover {
     opacity: 0.6;
-    background-color: lighten(#1d65f1, 20%);
+    background-color: lighten($primary, 20%);
   }
 }
 </style>

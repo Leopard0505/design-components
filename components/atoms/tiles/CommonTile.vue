@@ -19,10 +19,10 @@ export default class AtomsTilesCommonTile extends Vue {
 .tile {
   width: 100%;
   height: 100px;
-  background-color: #1d65f1;
+  background-color: $primary;
   color: #fff;
   font-size: 3rem;
-  border: solid 1px #1d65f1;
+  border: solid 1px $primary;
   border-radius: 10px;
   display: flex;
   align-items: center;

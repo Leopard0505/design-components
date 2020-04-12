@@ -29,7 +29,7 @@ const config: Configuration = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-good-table', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -41,7 +41,7 @@ const config: Configuration = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-fontawesome'],
+  modules: ['nuxt-fontawesome', '@nuxtjs/style-resources'],
   /*
    ** FontAwesome
    */
@@ -56,6 +56,12 @@ const config: Configuration = {
         icons: ['far']
       }
     ]
+  },
+  /*
+   ** @nuxtjs/style-resources configuration
+   */
+  styleResources: {
+    scss: ['~/assets/scss/_variables.scss', '~/assets/scss/_mixins.scss']
   },
   /*
    ** Build configuration

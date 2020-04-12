@@ -1,9 +1,7 @@
 <template>
-  <transition>
-    <button class="btn" :class="`btn__${type}`" @click="click">
-      <slot>{{ type }}</slot>
-    </button>
-  </transition>
+  <button class="btn" :class="`btn__${type}`">
+    <slot>{{ type }}</slot>
+  </button>
 </template>
 
 <script lang="ts">

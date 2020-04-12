@@ -23,16 +23,19 @@ export default {
 <style lang="scss">
 body {
   margin: 0;
-  background-color: #1d65f1;
+  background-color: $primary;
 }
 .container {
+  height: 100vh;
   display: flex;
   justify-content: flex-start;
-  padding: 15px;
+  padding: 15px 0;
+  box-sizing: border-box;
 }
 #main {
-  position: fixed;
+  // position: fixed;
+  position: relative;
   width: calc(100% - 215px);
-  margin-left: 185px;
+  margin-left: 200px;
 }
 </style>

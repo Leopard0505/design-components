@@ -38,9 +38,6 @@ export default class AtomsCardsCommonCard extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import url('~/assets/scss/_variables');
-@import url('~/assets/scss/_mixins');
-
 @mixin card($color: $primary) {
   .card_icon_box {
     background: rgba($color, 0.2);
