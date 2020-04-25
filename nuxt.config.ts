@@ -21,7 +21,7 @@ const config: Configuration = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: '~/components/molecules/loadings/CommonLoading.vue',
   /*
    ** Global CSS
    */
