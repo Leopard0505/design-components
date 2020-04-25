@@ -1,11 +1,11 @@
 <template>
-  <button class="round_btn" :class="`round_btn__${type}`">
+  <button class="round_btn" :class="`round_btn__${type}`" @click="click">
     <slot>10</slot>
   </button>
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import { Component, Vue, Prop, Emit } from 'nuxt-property-decorator'
 import CommonButton from './CommonButton.vue'
 
 @Component({
@@ -16,6 +16,11 @@ import CommonButton from './CommonButton.vue'
 })
 export default class AtomsButtonsRoundButton extends Vue {
   @Prop({ type: String, default: 'primary' }) type!: string
+
+  @Emit('click')
+  private click() {
+    return {}
+  }
 }
 </script>
 
