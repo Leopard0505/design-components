@@ -3,7 +3,7 @@
     <CommonCard @add="open" />
     <RoundImageCard v-for="data in datas" :key="data.id" v-bind="data" />
 
-    <CommonModal v-if="modal" @close="close" class="modal">
+    <CommonModal v-if="modal" class="modal" @close="close">
       <p>モーダル</p>
       <div class="modal__buttons">
         <CommonButton class="modal__button" @click="close">
@@ -15,7 +15,7 @@
       </div>
     </CommonModal>
 
-    <SuccessModal v-if="success" @close="close" class="modal">
+    <SuccessModal v-if="success" class="modal" @close="close">
       <p>Complete!</p>
       <CommonButton class="modal__button" type="red-gradient" @click="close">
         閉じる
