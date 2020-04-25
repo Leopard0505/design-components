@@ -70,6 +70,7 @@ export default class MoleculesSignupsCommonSignup extends Vue {
   position: relative;
   box-sizing: border-box;
   width: 500px;
+  max-width: 100%;
   padding: 50px 30px;
   background: lighten($color: $primary, $amount: 5%);
   border-radius: 15px;
