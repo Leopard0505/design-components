@@ -111,7 +111,7 @@ export default class MoleculesSidebarsCommonSidebar extends Vue {}
   &_link {
     width: 100%;
   }
-  .nuxt-link-active {
+  .nuxt-link-exact-active {
     .sidebar_link {
       background-color: lighten($primary, 20%);
     }
