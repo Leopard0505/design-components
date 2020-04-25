@@ -1,11 +1,26 @@
 <template>
-  <div class="wrap">
-    <CommonCard @add="add" />
+  <div class="cards">
+    <CommonCard @add="open" />
     <RoundImageCard v-for="data in datas" :key="data.id" v-bind="data" />
 
-    <CommonModal v-if="modal" @close="close">
+    <CommonModal v-if="modal" @close="close" class="modal">
       <p>モーダル</p>
+      <div class="modal__buttons">
+        <CommonButton class="modal__button" @click="close">
+          閉じる
+        </CommonButton>
+        <CommonButton class="modal__button" type="red-gradient" @click="add">
+          追加
+        </CommonButton>
+      </div>
     </CommonModal>
+
+    <SuccessModal v-if="success" @close="close" class="modal">
+      <p>Complete!</p>
+      <CommonButton class="modal__button" type="red-gradient" @click="close">
+        閉じる
+      </CommonButton>
+    </SuccessModal>
   </div>
 </template>
 
@@ -13,16 +28,21 @@
 import CommonCard from '../../molecules/cards/CommonCard.vue'
 import RoundImageCard from '../../molecules/cards/RoundImageCard.vue'
 import CommonModal from '../../molecules/modals/CommonModal.vue'
+import CommonButton from '../../atoms/buttons/CommonButton.vue'
+import SuccessModal from '../../molecules/modals/SuccessModal.vue'
 
 export default {
   components: {
     CommonCard,
     RoundImageCard,
-    CommonModal
+    CommonModal,
+    CommonButton,
+    SuccessModal
   },
   data() {
     return {
       modal: false,
+      success: false,
       datas: [
         {
           id: 1,
@@ -136,18 +156,35 @@ export default {
     }
   },
   methods: {
-    add() {
+    open() {
       this.modal = true
+    },
+    complete() {
+      this.success = true
     },
     close() {
       this.modal = false
+      this.success = false
+    },
+    add() {
+      this.datas.unshift({
+        id: this.datas.length + 1,
+        image: {
+          src: '/images/atom.svg',
+          alt: 'atom'
+        },
+        name1: 'atom',
+        name2: 'icon'
+      })
+      this.close()
+      this.complete()
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.wrap {
+.cards {
   display: flex;
   justify-content: flex-start;
   overflow-x: scroll;
@@ -159,9 +196,25 @@ export default {
   }
 }
 .card {
-  flex: 1;
   & + & {
     margin-left: 10px;
+  }
+}
+.modal {
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    &:hover {
+      box-shadow: none;
+    }
+    &:active {
+      box-shadow: none;
+    }
   }
 }
 </style>
