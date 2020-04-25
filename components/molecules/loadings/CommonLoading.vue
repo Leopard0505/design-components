@@ -12,8 +12,10 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 
-@Component({})
-export default class CommonLoading extends Vue {
+@Component({
+  name: 'MoleculesLoadingsCommonLoading'
+})
+export default class MoleculesLoadingsCommonLoading extends Vue {
   private loading = false
 
   public start() {
