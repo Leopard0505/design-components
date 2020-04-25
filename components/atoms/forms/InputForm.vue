@@ -22,13 +22,14 @@ export default class AtomsFormsInputForm extends Vue {
 .input {
   width: 100%;
   height: 30px;
-  padding: 0 5px;
+  padding: 0 15px;
   border: solid 0px #cfd8dc;
-  border-radius: 5px;
+  border-radius: 15px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: none;
   box-sizing: border-box;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 </style>

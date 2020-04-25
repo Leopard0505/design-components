@@ -1,9 +1,7 @@
 <template>
-  <transition>
-    <button class="round_btn" :class="`round_btn__${type}`">
-      <slot>10</slot>
-    </button>
-  </transition>
+  <button class="round_btn" :class="`round_btn__${type}`">
+    <slot>10</slot>
+  </button>
 </template>
 
 <script lang="ts">
@@ -45,6 +43,14 @@ export default class AtomsButtonsRoundButton extends Vue {
   &__danger {
     @include bg-gradient(180deg, $danger, 20%);
     border: solid 1px $danger;
+  }
+  &__red-gradient {
+    background: $red-gradient;
+    border: 0px;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 </style>
