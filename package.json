@@ -23,12 +23,14 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxt/typescript-runtime": "^0.4.2",
     "@nuxtjs/style-resources": "^1.0.0",
+    "apexcharts": "^3.19.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.25",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-property-decorator": "^2.5.1",
+    "vue-apexcharts": "^1.5.3",
     "vue-good-table": "^2.19.1"
   },
   "devDependencies": {
