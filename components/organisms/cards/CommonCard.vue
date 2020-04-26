@@ -264,7 +264,6 @@ export default class OrganismsCardsCommonCard extends Vue {
     const card = this.datas.find((data) => data.id === this.editData.id)
     if (!card) return
     card.updatedAt = dayjs().format('YYYY-MM-DD HH:mm:ss')
-    card.update = true
     this.close()
     this.complete()
   }
