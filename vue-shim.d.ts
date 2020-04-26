@@ -6,3 +6,5 @@ declare module '*.vue' {
 declare module 'vue-good-table' {
   import VueGoodTable from 'vue-good-table' // notice the syntax change
 }
+
+declare module 'vue-interactive-paycard';
