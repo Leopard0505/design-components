@@ -26,6 +26,7 @@ export default class MoleculesContentsCommonContent extends Vue {}
   bottom: 0;
   left: 0;
   right: 0;
+  @include overflow-scroll;
 
   &_wrapper {
     // width: 100%;

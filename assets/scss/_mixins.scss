@@ -4,3 +4,32 @@
 @mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {
   background: linear-gradient($angle, $color, adjust-hue($color, $amount));
 }
+
+// スクロールの定義
+// ex)
+// @include overflow-scroll;
+@mixin overflow-scroll {
+  overflow-y: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+  &::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+  }
+}
+
+// ブレイクポイントの定義
+// ex)
+// @include mq;
+// @include mq(large);
+$mq-breakpoints: (
+  'xsmall': 320px,
+  'small' : 600px,
+  'medium': 768px,
+  'large' : 1024px,
+  'xlarge': 1280px,
+);
+@mixin mq($breakpoint: medium) {
+  @media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

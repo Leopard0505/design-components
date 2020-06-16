@@ -24,5 +24,5 @@ import './molecules/contents/CommonContent.story'
 /** molecules Signouts */
 import './molecules/signouts/CommonSignout.story'
 
-/** molecules Tables */
-import './molecules/tables/CommonTable.story'
+/** molecules Loadings */
+import './molecules/loadings/CommonLoading.story'

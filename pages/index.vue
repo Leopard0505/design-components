@@ -1,9 +1,16 @@
 <template>
-  <div></div>
+  <div>
+    <InteractivePaycard />
+  </div>
 </template>
 
 <script>
-export default {}
+import InteractivePaycard from '../components/organisms/forms/InteractivePaycard.vue'
+export default {
+  components: {
+    InteractivePaycard
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>

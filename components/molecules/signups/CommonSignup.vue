@@ -56,11 +56,14 @@ export default class MoleculesSignupsCommonSignup extends Vue {
   private password = ''
 
   private singup() {
+    this.$nuxt.$loading.start()
     console.log('Name: %s', this.name)
     console.log('User ID: %s', this.userId)
     console.log('Profession: %s', this.profession)
     console.log('Email: %s', this.email)
     console.log('Password: %s', this.password)
+    this.$nuxt.$loading.finish()
+    this.$router.replace('/')
   }
 }
 </script>

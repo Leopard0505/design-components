@@ -1,56 +1,54 @@
 <template>
-  <transition>
-    <aside id="sidebar">
-      <div class="siderbar-wrap">
-        <CommonTile icon="moon" />
-        <ul class="sidebar">
-          <li class="sidebar_item">
-            <nuxt-link class="link" to="/">
-              <IconButton class="sidebar_link" icon="home">
-                Home
-              </IconButton>
-            </nuxt-link>
-          </li>
-          <li class="sidebar_item">
-            <nuxt-link class="link" to="/client">
-              <IconButton class="sidebar_link" icon="address-book">
-                Client
-              </IconButton>
-            </nuxt-link>
-          </li>
-          <li class="sidebar_item">
-            <nuxt-link class="link" to="/balance">
-              <IconButton class="sidebar_link" icon="balance-scale-right">
-                Balance
-              </IconButton>
-            </nuxt-link>
-          </li>
-          <li class="sidebar_item">
-            <nuxt-link class="link" to="/analytics">
-              <IconButton class="sidebar_link" icon="chart-line">
-                Analytics
-              </IconButton>
-            </nuxt-link>
-          </li>
-          <li class="sidebar_item">
-            <nuxt-link class="link" to="/business">
-              <IconButton class="sidebar_link" icon="briefcase">
-                Business
-              </IconButton>
-            </nuxt-link>
-          </li>
-          <li class="sidebar_item">
-            <nuxt-link class="link" to="/settings">
-              <IconButton class="sidebar_link" icon="sliders-h">
-                Settings
-              </IconButton>
-            </nuxt-link>
-          </li>
-        </ul>
-        <CommonSignout />
-      </div>
-    </aside>
-  </transition>
+  <aside id="sidebar">
+    <div class="siderbar-wrap">
+      <CommonTile icon="moon" />
+      <ul class="sidebar">
+        <li class="sidebar_item">
+          <nuxt-link class="link" to="/">
+            <IconButton class="sidebar_link" icon="home">
+              Home
+            </IconButton>
+          </nuxt-link>
+        </li>
+        <li class="sidebar_item">
+          <nuxt-link class="link" to="/client">
+            <IconButton class="sidebar_link" icon="address-book">
+              Client
+            </IconButton>
+          </nuxt-link>
+        </li>
+        <li class="sidebar_item">
+          <nuxt-link class="link" to="/balance">
+            <IconButton class="sidebar_link" icon="balance-scale-right">
+              Balance
+            </IconButton>
+          </nuxt-link>
+        </li>
+        <li class="sidebar_item">
+          <nuxt-link class="link" to="/analytics">
+            <IconButton class="sidebar_link" icon="chart-line">
+              Analytics
+            </IconButton>
+          </nuxt-link>
+        </li>
+        <li class="sidebar_item">
+          <nuxt-link class="link" to="/business">
+            <IconButton class="sidebar_link" icon="briefcase">
+              Business
+            </IconButton>
+          </nuxt-link>
+        </li>
+        <li class="sidebar_item">
+          <nuxt-link class="link" to="/settings">
+            <IconButton class="sidebar_link" icon="sliders-h">
+              Settings
+            </IconButton>
+          </nuxt-link>
+        </li>
+      </ul>
+      <CommonSignout />
+    </div>
+  </aside>
 </template>
 
 <script lang="ts">
@@ -82,6 +80,12 @@ export default class MoleculesSidebarsCommonSidebar extends Vue {}
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 15px 15px 50px 15px;
+  @include mq(xsmall) {
+    display: none;
+  }
+  @include mq(medium) {
+    display: block;
+  }
 }
 .siderbar-wrap {
   position: relative;

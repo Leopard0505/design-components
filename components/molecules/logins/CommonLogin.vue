@@ -38,8 +38,11 @@ export default class MoleculesLoginsCommonLogin extends Vue {
   private password = ''
 
   private login() {
+    this.$nuxt.$loading.start()
     console.log('Username: %s', this.username)
     console.log('Password: %s', this.password)
+    this.$nuxt.$loading.finish()
+    this.$router.replace('/')
   }
 }
 </script>

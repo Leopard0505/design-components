@@ -27,7 +27,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 })
 export default class MoleculesSignoutsCommonSignout extends Vue {
   private signout() {
-    console.log('signout')
+    this.$router.push('/signin')
   }
 }
 </script>
