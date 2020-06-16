@@ -1,54 +1,29 @@
 <template>
   <div class="sign">
     <div class="sign__tab">
-      <span
-        class="sign__tab-text"
-        :class="{ active: formLogin }"
-        @click="change(1)"
-      >
-        Log in
-      </span>
-      <span
-        class="sign__tab-text"
-        :class="{ active: formSignup }"
-        @click="change(2)"
-      >
+      <nuxt-link class="sign__tab-text" to="/signin">
+        Sign in
+      </nuxt-link>
+      <nuxt-link class="sign__tab-text active" to="/signup">
         Sign up
-      </span>
+      </nuxt-link>
     </div>
 
-    <CommonLogin v-if="formLogin" />
-    <CommonSignup v-else-if="formSignup" />
+    <CommonSignup />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import CommonLogin from '../../molecules/logins/CommonLogin.vue'
 import CommonSignup from '../../molecules/signups/CommonSignup.vue'
 
 @Component({
-  name: 'OrganismsSignsCommonSign',
+  name: 'OrganismsSignsCommonSignup',
   components: {
-    CommonLogin,
     CommonSignup
   }
 })
-export default class OrganismsSignsCommonSign extends Vue {
-  private mode = 1
-
-  get formLogin() {
-    return this.mode === 1
-  }
-
-  get formSignup() {
-    return this.mode === 2
-  }
-
-  private change(mode: number) {
-    this.mode = mode
-  }
-}
+export default class OrganismsSignsCommonSignup extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -62,6 +37,7 @@ export default class OrganismsSignsCommonSign extends Vue {
     padding: 0 100px;
     margin-bottom: 30px;
     &-text {
+      text-decoration: none;
       font-size: 1.4rem;
       font-weight: bold;
       color: darken($primary, 13%);
