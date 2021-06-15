@@ -24,7 +24,7 @@
     "@nuxt/typescript-runtime": "^0.4.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "apexcharts": "^3.19.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.25",
     "nuxt": "^2.0.0",
